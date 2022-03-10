@@ -1,0 +1,49 @@
+﻿<Window x:Class="WoW.MainWindow"
+    xmlns:cm="clr-namespace:System.ComponentModel;assembly=system"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="328.8" Width="440" ResizeMode="CanMinimize" Background="AliceBlue" WindowStyle="SingleBorderWindow">
+    <!--<Window.Resources>
+        <cm:BackgroundWorker x:Key="BackgroundWorker1"
+            WorkerReportsProgress="True"
+            WorkerSupportsCancellation="True"
+            DoWork="BackgroundWorker1_DoWork"
+            ProgressChanged="BackgroundWorker1_ProgressChanged"
+            RunWorkerCompleted="BackgroundWorker1_RunWorkerCompleted"/>
+    </Window.Resources>-->
+
+
+    <Grid Margin="0,0,-0.2,0">
+        <Button x:Name="ButtonWayOut" Content="путь 1" HorizontalAlignment="Left" Margin="23,74,0,0" VerticalAlignment="Top" Width="51" Click="ButtonWayOut_Click" Height="25"/>
+        <Button x:Name="ButtonWayIn" Content="путь 2" HorizontalAlignment="Left" Margin="23,111,0,0" VerticalAlignment="Top" Width="51" Click="ButtonWayIn_Click" RenderTransformOrigin="-9.695,2.26" Height="25"/>
+        <Button x:Name="btnStart" Content="выполнить" HorizontalAlignment="Left" Margin="312,111,0,0" FontSize="14" VerticalAlignment="Top" Width="112" Height="25" Click="btnStart_Click" IsEnabled="False"/>
+        <Button x:Name="btnRenameFile" Content="переименовать" HorizontalAlignment="Left" Margin="312,74,0,0" FontSize="14" VerticalAlignment="Top" Width="112" Height="25" Click="btnRenameFile_Click" IsEnabled="False"/>
+        <Button x:Name="btnInfoFile" Content="получить информацию" HorizontalAlignment="Left" Margin="10,182,0,0" FontSize="12" VerticalAlignment="Top" Width="143" Height="20" Click="btnInfoFile_Click" IsEnabled="False"/>
+
+        <Label x:Name="lName" Content="Имя" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="409"/>
+        <Label x:Name="lSize" Content="Размер" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="409"/>
+        <Label x:Name="lCreateTime" Content="Дата создания" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="409"/>
+        <ComboBox x:Name="cmbSelectedMode" HorizontalContentAlignment="Center" FontSize="12" HorizontalAlignment="Left" Margin="74,11,0,0" VerticalAlignment="Top" Width="104" Height="25" SelectionChanged="cmbSelectedMode_SelectionChanged">
+            <Label Content="Файлы" FontSize="12"/>
+            <Label Content="Директории" FontSize="12"/>
+        </ComboBox>
+        <TextBox x:Name="TextNewName" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="92,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14"/>
+        <Label Content="приоритет:" HorizontalAlignment="Left" Margin="234,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbPriorityThread1" HorizontalAlignment="Left" Margin="309,11,0,0" VerticalAlignment="Top" Width="110" Height="25" SelectionChanged="cmbPriorityThread1_SelectionChanged">
+            <ComboBoxItem Content="низкий"/>
+            <ComboBoxItem Content="ниже среднего"/>
+            <ComboBoxItem Content="средний"/>
+            <ComboBoxItem Content="выше среднего"/>
+            <ComboBoxItem Content="высокий"/>
+        </ComboBox>
+        <Label Content="задача:" HorizontalAlignment="Left" Margin="23,11,0,0" VerticalAlignment="Top" Width="51"/>
+        <ComboBox x:Name="cmbSelectedAction" HorizontalContentAlignment="Center" FontSize="12" HorizontalAlignment="Left" Margin="92,111,0,0" VerticalAlignment="Top" Width="220" SelectedIndex="0" Height="25">
+            <Label Content="копировать" FontSize="12"/>
+            <Label Content="переместить" FontSize="12"/>
+            <Label Content="удалить" FontSize="12"/>
+        </ComboBox>
+        <CheckBox x:Name="chWay1_selected" Content="" HorizontalAlignment="Left" Margin="5,84,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <CheckBox x:Name="chWay2_selected" Content="" HorizontalAlignment="Left" Margin="5,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.522,3.066" IsEnabled="False"/>
+
+    </Grid>
+
+</Window>
